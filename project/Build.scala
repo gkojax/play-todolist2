@@ -12,7 +12,8 @@ object ApplicationBuild extends Build {
       "postgresql" % "postgresql" % "8.4-702.jdbc4",
       "org.webjars" % "bootstrap" % "2.1.1",
       "org.mindrot" % "jbcrypt" % "0.3m",
-      "jp.t2v" % "play20.auth_2.9.1" % "0.4-SNAPSHOT"
+      "jp.t2v" % "play20.auth_2.9.1" % "0.4-SNAPSHOT",
+      "commons-daemon" % "commons-daemon" % "1.0.10"
     )
 
     lazy val main = PlayProject(appName, appVersion, appDependencies, mainLang = SCALA).settings(
