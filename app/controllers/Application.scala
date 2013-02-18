@@ -8,7 +8,7 @@ import models._
 import views._
 import play.api.mvc._
 import play.api.mvc.Results._
-
+import reflect.{ClassTag, classTag}
 
 object Application extends Controller with LoginLogout with AuthConfigImpl {
 
@@ -69,7 +69,7 @@ trait AuthConfigImpl extends AuthConfig {
 
   type Authority = Permission
 
-  val idManifest = classManifest[Id]
+  val idTag = classTag[Id]
 
   val sessionTimeoutInSeconds = 3600
 
@@ -89,7 +89,7 @@ trait AuthConfigImpl extends AuthConfig {
     case _ => false
   }
 
-//  override def resolver[A](implicit request: Request[A]) =
-//    new CookieRelationResolver[Id, A](request)
+  // override lazy val cookieSecureOption: Boolean = play.api.Play.current.configuration.getBoolean("auth.cookie.secure").getOrElse(true)
+
 
 }
