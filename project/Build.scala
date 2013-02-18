@@ -12,9 +12,11 @@ object ApplicationBuild extends Build {
     jdbc,
     anorm,
     "postgresql" % "postgresql" % "8.4-702.jdbc4",
-    "org.webjars" % "bootstrap" % "2.1.1",
+    "org.webjars" % "bootstrap" % "2.3.0",
     "org.mindrot" % "jbcrypt" % "0.3m",
-    "jp.t2v" %% "play21.auth" % "0.7"
+    "jp.t2v" %% "play21.auth" % "0.7",
+    "com.github.tototoshi" %% "scala-csv" % "0.6.0",
+    "com.github.nscala-time" %% "nscala-time" % "0.2.0"
   )
 
   val main = play.Project(appName, appVersion, appDependencies).settings(
