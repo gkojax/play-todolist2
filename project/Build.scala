@@ -12,7 +12,6 @@ object ApplicationBuild extends Build {
     jdbc,
     anorm,
     "postgresql" % "postgresql" % "8.4-702.jdbc4",
-    "org.webjars" % "bootstrap" % "2.3.0",
     "org.mindrot" % "jbcrypt" % "0.3m",
     "jp.t2v" %% "play21.auth" % "0.7",
     "com.github.tototoshi" %% "scala-csv" % "0.6.0",
@@ -24,5 +23,4 @@ object ApplicationBuild extends Build {
     resolvers += "jbcrypt repo" at "http://mvnrepository.com/",
     resolvers += "t2v.jp repo" at "http://www.t2v.jp/maven-repo/"
   )
-
 }
